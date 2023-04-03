@@ -1,7 +1,7 @@
-<script>
+<script setup>
 </script>
 <template>
-  Works
+  <div>Works</div>
 </template>
 <style scoped>
 </style>

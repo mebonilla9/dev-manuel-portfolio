@@ -1,13 +1,8 @@
 <script setup>
-/*export default{
-  name: 'About',
-  setup(){
-    return {}
-  }
-}*/ 
+
 </script>
 <template>
-  About
+  <div>About</div>
 </template>
 <style scoped>
 </style>

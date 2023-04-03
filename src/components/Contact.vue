@@ -1,7 +1,7 @@
 <script setup>
 </script>
 <template>
-  Contact
+  <div>Contact</div>
 </template>
 <style scoped>
 </style>

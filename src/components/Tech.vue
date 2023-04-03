@@ -1,7 +1,7 @@
-<script>
+<script setup>
 </script>
 <template>
-  Tech
+  <div>Tech</div>
 </template>
 <style scoped>
 </style>

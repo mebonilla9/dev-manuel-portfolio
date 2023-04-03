@@ -1,7 +1,7 @@
-<script>
+<script script>
 </script>
 <template>
-  Feedbacks
+  <div>Feedbacks</div>
 </template>
 <style scoped>
 </style>

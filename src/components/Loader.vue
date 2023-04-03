@@ -1,7 +1,7 @@
-<script>
+<script setup>
 </script>
 <template>
-  Loader
+  <div>Loader</div>
 </template>
 <style scoped>
 </style>

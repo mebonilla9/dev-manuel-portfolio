@@ -1,10 +1,7 @@
-<script>
-export default{
-  name: 'Experience'
-}
+<script setup>
 </script>
 <template>
-  Experience
+  <div>Experience</div>
 </template>
 <style scoped>
 </style>
