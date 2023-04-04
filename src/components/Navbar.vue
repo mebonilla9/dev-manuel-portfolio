@@ -15,9 +15,10 @@ const clickHome = () => {
   active.value = ''
   window.scrollTo(0, 0)
 }
-/*const setToggle = (value) => {
-  toggle.value = value
-}*/
+const clickMenu = (link, hide) => {
+  active.value = link
+  toggle.value = hide
+}
 const activeLink = computed(() => (title) => {
   return (active.value === title ? 'text-white' : 'text-secondary') + ' hover:text-white text-[18px] font-medium cursor-pointer'
 })
@@ -33,21 +34,22 @@ const toggleMenu = computed(() => {
     <div class="w-full flex justify-between items-center max-w-7x1 mx-auto">
       <RouterLink to="/" class="flex items-center gap-2" @click="clickHome">
         <img :src="logo" alt="logo" class="w-9 h-9 object-contain" />
-        <p class="text-white text-[18px] font-bold cursor-pointer flex">Manuel &nbsp <span class="sm:block hidden"> |
+        <p class="text-white text-[18px] font-bold cursor-pointer flex">Manuel &nbsp; <span class="sm:block hidden"> |
             Software Engineer</span></p>
       </RouterLink>
       <ul class="list-none hidden sm:flex flex-row gap-10">
-        <li v-for="link in navLinks" :key="link.id" :class="activeLink(link.title)" @click="active=link.title">
-          <a :href="link.id">{{ link.title }}</a>
+        <li v-for="link in navLinks" :key="link.id" :class="activeLink(link.title)" @click="active = link.title">
+          <RouterLink :to="link.id">{{ link.title }}</RouterLink>
         </li>
       </ul>
       <div class="sm:hidden flex flex-1 justify-end items-center">
         <img :src="toggle ? close : menu" alt="menu" class="w-[28px] h-[28px] object-contain cursor-pointer"
-          @click="toggle=!toggle">
+          @click="toggle = !toggle">
         <div :class="toggleMenu">
           <ul class="list-none flex justify-end items-start flex-col gap-4">
-            <li v-for="link in navLinks" :key="link.id" :class="activeLinkMenu(link.title)" @click="">
-              <a :href="link.id">{{ link.title }}</a>
+            <li v-for="link in navLinks" :key="link.id" :class="activeLinkMenu(link.title)"
+              @click="clickMenu(link.title, !toggle)">
+              <RouterLink :to="link.id">{{ link.title }}</RouterLink>
             </li>
           </ul>
         </div>
