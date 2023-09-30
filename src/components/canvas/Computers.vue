@@ -1,8 +1,8 @@
 <script setup>
-
+import { TresCanvas } from '@tresjs/core'
 </script>
 <template>
-  <div>Computers</div>
+  
 </template>
 <style scoped>
 </style>
